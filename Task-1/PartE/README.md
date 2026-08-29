@@ -1,8 +1,20 @@
-# Part E – Simulation and Testbench Development
+# Part E – Simulation and Waveform Verification
 
-## Simulation Workflow
+## Objective
 
-Verilog RTL → Testbench → Icarus Verilog → Simulation → GTKWave
+The objective of Part E is to verify the functionality of the Verilog RTL modules developed in the previous stages through simulation and waveform analysis.
+
+The designs were simulated using **Icarus Verilog**, and the resulting signal waveforms were analyzed using **GTKWave**.
+
+---
+
+## Simulation Flow
+
+The verification process follows the workflow:
+
+**Verilog RTL → Testbench → Icarus Verilog → Simulation → GTKWave → Waveform Analysis**
+
+The testbench provides different input combinations to the Design Under Test (DUT). The simulation output is then examined using GTKWave to verify that the observed outputs match the expected logic behavior.
 
 ---
 
@@ -10,44 +22,77 @@ Verilog RTL → Testbench → Icarus Verilog → Simulation → GTKWave
 
 ### 1. AND Gate
 
-![AND Gate Waveform](waveforms/and_gate_waveform.png)
+The AND gate was simulated with different input combinations. The waveform verifies that the output becomes HIGH only when both inputs are HIGH.
 
-The waveform verifies the expected AND logic for the applied input combinations.
+![AND Gate Waveform](and_gate.png)
 
 ---
 
 ### 2. OR Gate
 
-![OR Gate Waveform](waveforms/or_gate_waveform.png)
+The OR gate was simulated with different input combinations. The waveform verifies that the output becomes HIGH when at least one input is HIGH.
 
-The waveform verifies the expected OR logic.
+![OR Gate Waveform](or.png)
 
 ---
 
 ### 3. XOR Gate
 
-![XOR Gate Waveform](waveforms/xor_gate_waveform.png)
+The XOR gate was simulated with different input combinations. The waveform verifies that the output becomes HIGH when the two inputs are different.
 
-The waveform verifies the expected XOR logic.
-
----
-
-### 4. Half Adder
-
-![Half Adder Waveform](waveforms/half_adder_waveform.png)
-
-The waveform shows the Sum and Carry outputs for the applied inputs.
+![XOR Gate Waveform](xor_gate.png)
 
 ---
 
-### 5. Full Adder
+### 4. 2:1 Multiplexer
 
-![Full Adder Waveform](waveforms/full_adder_waveform.png)
+The 2:1 Multiplexer was simulated using different input and select-line combinations. The waveform verifies that the selected input is correctly transferred to the output.
 
-The waveform verifies the Sum and Carry-out outputs.
+![2:1 Multiplexer Waveform](mux2_1.png)
+
+---
+
+### 5. Half Adder
+
+The Half Adder was simulated for different combinations of the two input bits. The waveform verifies the correct **Sum** and **Carry** outputs.
+
+![Half Adder Waveform](halfadd_waveform.png)
+
+---
+
+### 6. Full Adder
+
+The Full Adder was simulated with different combinations of the two input bits and carry input. The waveform verifies the correct **Sum** and **Carry-out** outputs.
+
+![Full Adder Waveform](fulladd_waveform.png)
+
+---
+
+## Verification Summary
+
+| Circuit | Verification Method | Result |
+|---|---|---|
+| AND Gate | Icarus Verilog + GTKWave | Verified |
+| OR Gate | Icarus Verilog + GTKWave | Verified |
+| XOR Gate | Icarus Verilog + GTKWave | Verified |
+| 2:1 Multiplexer | Icarus Verilog + GTKWave | Verified |
+| Half Adder | Icarus Verilog + GTKWave | Verified |
+| Full Adder | Icarus Verilog + GTKWave | Verified |
+
+---
+
+## Tools Used
+
+- **Verilog HDL** – RTL design
+- **Icarus Verilog** – Compilation and simulation
+- **GTKWave** – Waveform visualization and analysis
+- **Ubuntu / WSL** – Linux development environment
+- **GitHub** – Version control and project documentation
 
 ---
 
 ## Conclusion
 
-All implemented RTL modules were simulated using Icarus Verilog and their signal transitions were analyzed using GTKWave.
+The simulation results provide functional verification of the implemented digital circuits. The GTKWave waveforms were analyzed to confirm that the outputs respond correctly to the applied input combinations.
+
+This simulation and verification process demonstrates the basic RTL development workflow used in digital hardware design.
