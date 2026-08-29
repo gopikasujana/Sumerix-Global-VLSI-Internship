@@ -6,7 +6,7 @@ This folder contains all work completed for **Task 1** of the Industry-Oriented 
 
 Task 1 covers the foundational concepts required before moving into RTL and sequential design — including semiconductor fundamentals, digital electronics, Linux environment setup, Verilog HDL, testbench development, simulation, waveform verification, and a mini project.
 
-📄 For the complete, detailed project report, see: **[PROJECT_REPORT.md](https://github.com/gopikasujana/Sumerix-Global-VLSI-Internship/blob/main/Task-1/PROJECT_REPORT.md)**
+| [Project_Report.md](https://github.com/gopikasujana/Sumerix-Global-VLSI-Internship/blob/main/Task-1/Project_Report.md) | Full consolidated Task 1 project report | ✅ Complete |
 
 ---
 
