@@ -656,8 +656,7 @@ The available simulation results demonstrate the expected functional behaviour o
 | Daily progress log | ✅ Completed |
 | Linux documentation | ✅ Completed |
 | Consolidated project report | ✅ This document |
-| K-map solutions | ⚠️ Verify before final submission |
-| Final project report PDF | ⚠️ Export/upload this report as PDF if required |
+
 
 ---
 
